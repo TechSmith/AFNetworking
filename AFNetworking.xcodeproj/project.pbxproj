@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058F962315FA43B500E63D9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058F962215FA43B500E63D9D /* SystemConfiguration.framework */; };
 		E427C09015F6DEA600E5518E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E40E9C5F15F6D43100A108DF /* AFHTTPClient.m */; };
 		E427C09115F6DEA600E5518E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E40E9C6115F6D43100A108DF /* AFHTTPRequestOperation.m */; };
 		E427C09215F6DEA600E5518E /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E40E9C6315F6D43100A108DF /* AFImageRequestOperation.m */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		058F962215FA43B500E63D9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E40E9C2F15F6D2D100A108DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40E9C3315F6D2D100A108DF /* AFNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-Prefix.pch"; sourceTree = "<group>"; };
 		E40E9C3415F6D2D100A108DF /* AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058F962315FA43B500E63D9D /* SystemConfiguration.framework in Frameworks */,
 				E427C09B15F6DEA600E5518E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +100,7 @@
 		E40E9C2E15F6D2D100A108DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				058F962215FA43B500E63D9D /* SystemConfiguration.framework */,
 				E40E9C2F15F6D2D100A108DF /* Foundation.framework */,
 				E40E9C4015F6D2D100A108DF /* SenTestingKit.framework */,
 				E40E9C4215F6D2D100A108DF /* UIKit.framework */,
