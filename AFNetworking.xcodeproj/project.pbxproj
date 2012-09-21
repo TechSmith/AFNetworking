@@ -37,12 +37,7 @@
 		E40E9C2F15F6D2D100A108DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40E9C3315F6D2D100A108DF /* AFNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-Prefix.pch"; sourceTree = "<group>"; };
 		E40E9C3415F6D2D100A108DF /* AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		E40E9C3515F6D2D100A108DF /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = ../Configurations/Project.xcconfig; sourceTree = "<group>"; };
-		E40E9C3615F6D2D100A108DF /* Library-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Library-Base.xcconfig"; path = "../Configurations/Library-Base.xcconfig"; sourceTree = "<group>"; };
-		E40E9C3715F6D2D100A108DF /* Library-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Library-Release.xcconfig"; path = "../Configurations/Library-Release.xcconfig"; sourceTree = "<group>"; };
-		E40E9C3815F6D2D100A108DF /* Library-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Library-Debug.xcconfig"; path = "../Configurations/Library-Debug.xcconfig"; sourceTree = "<group>"; };
 		E40E9C4015F6D2D100A108DF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E40E9C4215F6D2D100A108DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E40E9C5E15F6D43100A108DF /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		E40E9C5F15F6D43100A108DF /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		E40E9C6015F6D43100A108DF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -84,7 +79,6 @@
 			children = (
 				E40E9C3115F6D2D100A108DF /* AFNetworking */,
 				E40E9C2E15F6D2D100A108DF /* Frameworks */,
-				E40E9C5C15F6D41D00A108DF /* Configurations */,
 				E40E9C2D15F6D2D100A108DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +97,6 @@
 				058F962215FA43B500E63D9D /* SystemConfiguration.framework */,
 				E40E9C2F15F6D2D100A108DF /* Foundation.framework */,
 				E40E9C4015F6D2D100A108DF /* SenTestingKit.framework */,
-				E40E9C4215F6D2D100A108DF /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,18 +125,6 @@
 				E40E9C3315F6D2D100A108DF /* AFNetworking-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E40E9C5C15F6D41D00A108DF /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				E40E9C3515F6D2D100A108DF /* Project.xcconfig */,
-				E40E9C3615F6D2D100A108DF /* Library-Base.xcconfig */,
-				E40E9C3815F6D2D100A108DF /* Library-Debug.xcconfig */,
-				E40E9C3715F6D2D100A108DF /* Library-Release.xcconfig */,
-			);
-			name = Configurations;
-			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		E412B71715F7FB5500756206 /* Categories */ = {
@@ -271,7 +252,6 @@
 /* Begin XCBuildConfiguration section */
 		E40E9C5115F6D2D100A108DF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E40E9C3515F6D2D100A108DF /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -285,29 +265,28 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		E40E9C5215F6D2D100A108DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E40E9C3515F6D2D100A108DF /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -315,23 +294,27 @@
 		};
 		E427C0A915F6DEA600E5518E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E40E9C3815F6D2D100A108DF /* Library-Debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AFNetworking.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFNetworking/AFNetworking-Prefix.pch";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/private";
 				PRODUCT_NAME = AFNetworking;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		E427C0AA15F6DEA600E5518E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E40E9C3715F6D2D100A108DF /* Library-Release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/AFNetworking.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AFNetworking/AFNetworking-Prefix.pch";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(PUBLIC_HEADERS_FOLDER_PATH)/private";
 				PRODUCT_NAME = AFNetworking;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
