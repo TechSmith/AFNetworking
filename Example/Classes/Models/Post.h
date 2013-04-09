@@ -1,4 +1,4 @@
-// AFTwitterAPIClient.h
+// Post.h
 //
 // Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
 // 
@@ -21,10 +21,18 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking/AFHTTPClient.h"
 
-@interface AFTwitterAPIClient : AFHTTPClient
+@class User;
 
-+ (AFTwitterAPIClient *)sharedClient;
+@interface Post : NSObject
+
+@property (readonly) NSUInteger postID;
+@property (readonly) NSString *text;
+
+@property (readonly) User *user;
+
+- (id)initWithAttributes:(NSDictionary *)attributes;
+
++ (void)globalTimelinePostsWithBlock:(void (^)(NSArray *posts, NSError *error))block;
 
 @end

@@ -1,4 +1,4 @@
-// PublicTimelineViewController.h
+// TweetTableViewCell.h
 //
 // Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
 // 
@@ -22,6 +22,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PublicTimelineViewController : UITableViewController
+@class Post;
+
+@interface PostTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) Post *post;
+
++ (CGFloat)heightForCellWithPost:(Post *)post;
 
 @end

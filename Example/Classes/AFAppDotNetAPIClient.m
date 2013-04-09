@@ -1,4 +1,4 @@
-// AFTwitterAPIClient.h
+// AFAppDotNetAPIClient.h
 //
 // Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
 // 
@@ -20,19 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AFTwitterAPIClient.h"
+#import "AFAppDotNetAPIClient.h"
 
 #import "AFNetworking/AFJSONRequestOperation.h"
 
-static NSString * const kAFTwitterAPIBaseURLString = @"http://api.twitter.com/1/";
+static NSString * const kAFAppDotNetAPIBaseURLString = @"https://alpha-api.app.net/";
 
-@implementation AFTwitterAPIClient
+@implementation AFAppDotNetAPIClient
 
-+ (AFTwitterAPIClient *)sharedClient {
-    static AFTwitterAPIClient *_sharedClient = nil;
++ (AFAppDotNetAPIClient *)sharedClient {
+    static AFAppDotNetAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[AFTwitterAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kAFTwitterAPIBaseURLString]];
+        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kAFAppDotNetAPIBaseURLString]];
     });
     
     return _sharedClient;

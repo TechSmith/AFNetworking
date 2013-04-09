@@ -1,4 +1,4 @@
-// TweetTableViewCell.h
+// AFAppDotNetAPIClient.h
 //
 // Copyright (c) 2012 Mattt Thompson (http://mattt.me/)
 // 
@@ -20,14 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AFNetworking/AFHTTPClient.h"
 
-@class Tweet;
+@interface AFAppDotNetAPIClient : AFHTTPClient
 
-@interface TweetTableViewCell : UITableViewCell
-
-@property (nonatomic, strong) Tweet *tweet;
-
-+ (CGFloat)heightForCellWithTweet:(Tweet *)tweet;
++ (AFAppDotNetAPIClient *)sharedClient;
 
 @end
