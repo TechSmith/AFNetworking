@@ -488,7 +488,7 @@ expectedTotalBytes:(int64_t)expectedTotalBytes {
                         progress:(NSProgress * __autoreleasing *)progress
                completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler
 {
-   if (!uploadTask) {
+   if (!task) {
       return;
    }
    
